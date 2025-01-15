@@ -1,13 +1,19 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
 
 function App() {
  
 
   return (
-    <div className='min-h-screen bg-gray-100 flex items-center justify-center'>
-      <h1 className="text-3xl font-bold text-gray-800">Notes Manager</h1>
-    </div>
-    
+    <Router>
+     
+      <Routes>
+        <Route path="/" element= {<Header/> } />
+        <Route path="/create" element={<h1>About</h1>} />
+        <Route path="/edit" element={<h1>About</h1>} />
+      </Routes>
+      </Router>    
   )
 }
 
