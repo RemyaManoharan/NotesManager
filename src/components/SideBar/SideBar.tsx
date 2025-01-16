@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { RiHome6Line } from 'react-icons/ri';
 import { HiOutlineDocumentReport } from 'react-icons/hi';
