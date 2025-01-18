@@ -1,4 +1,3 @@
-/* eslint-disable  */
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { Note } from "../types/note";

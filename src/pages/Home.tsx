@@ -6,11 +6,11 @@ interface HomeProps {
   children?: ReactNode;
 }
 
-const Home: React.FC<HomeProps> = ({ header, sidebar, children }) => {
+const Home: React.FC<HomeProps> = ({ sidebar, children }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <div className="w-full bg-white shadow-sm">{header}</div>
+      {/* <div className="w-full bg-white shadow-sm">{header}</div> */}
 
       {/* Main Content Area */}
       <div className="flex h-[calc(100vh-4rem)] flex-1">
