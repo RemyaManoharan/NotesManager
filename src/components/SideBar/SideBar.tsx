@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { RiHome6Line } from 'react-icons/ri';
 import { HiOutlineDocumentReport } from 'react-icons/hi';
 import { LightbulbIcon, MoreHorizontal } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useNotesStore } from '@/store/useNoteStore';
+
 interface SidebarItem {
   id: number;
   category: string;
@@ -17,7 +19,11 @@ const SideBar: React.FC<SidebarProps> = ({
   onCategoryChange,
   defaultSelected = 'Work',
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Work');
+  const setSelectedCategory = useNotesStore(
+    (state) => state.setSelectedCategory
+  );
+  const selectedCategory = useNotesStore((state) => state.selectedCategory);
+  // const [selectedCategory, setSelectedCategory] = useState<string>('Work');
   const ICON_CLASS = 'h-5 w-5';
   const SIDEBAR_ITEMS: SidebarItem[] = [
     {
