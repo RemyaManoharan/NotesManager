@@ -1,4 +1,3 @@
-/* eslint-disable  */
 import { Note } from '@/types/note';
 import { Pencil, Trash2 } from 'lucide-react';
 import {
@@ -35,7 +34,7 @@ const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete, onClick }) => {
     setIsExpanded(!isExpanded);
   };
   return (
-    <div className="flex w-64 flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition-shadow duration-200 hover:shadow-xl">
+    <div className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition-shadow duration-200 hover:shadow-xl">
       {/* Title Section with Blue Background - Reduced padding */}
       <div className="h-10 bg-blue-400 px-3 py-2">
         <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
