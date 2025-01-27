@@ -1,4 +1,3 @@
-/* eslint-disable  */
 import React from 'react';
 import { useNotesStore } from '../../store/useNoteStore';
 import { Note } from '../../types/note';
@@ -17,7 +16,7 @@ const NoteList: React.FC = () => {
   };
 
   return (
-    <div className="grid auto-rows-fr grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5">
+    <div className="grid auto-rows-fr grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
       {filteredNotes.map((note) => (
         <NoteCard
           key={note.id}
@@ -27,6 +26,7 @@ const NoteList: React.FC = () => {
         />
       ))}
     </div>
+ 
   );
 };
 
