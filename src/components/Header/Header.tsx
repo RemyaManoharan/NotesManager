@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi';
+
 import { AiOutlinePlus } from 'react-icons/ai';
 // import notelogo from '../../assets/notelogo.png';
 import { Button } from '../ui/button';
@@ -34,10 +34,9 @@ const Header = () => {
               >
                 Home
               </Link>
-              <button className="flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
-                <FiSearch className="mr-1 h-4 w-4" />
-                Search
-              </button>
+              <Button size="sm" onClick={() => navigate('/search')}>
+                         <span>Search</span>
+            </Button>
             </nav>
 
             {/* <button
