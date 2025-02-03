@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SideBar from './components/SideBar/SideBar';
 import NoteEditor from './features/note/NoteEditor';
 import NoteList from './features/note/NoteList';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/" element={<Home sidebar={<SideBar />}  notelist ={<NoteList />}/>} />
           <Route path="/create" element={<NoteEditor />} />
           <Route path="/note/:id" element={<NoteEditor />} />
-          <Route path="/edit" element={<h1>About</h1>} />
+          <Route path="/search" element={<SearchPage/>} />
         </Routes>
       </div>
     </Router>
