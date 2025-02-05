@@ -98,7 +98,7 @@ const SearchPage = () => {
             </Popover>
             {selectedDate && (
               <Button variant="ghost" size="icon" onClick={clearDate}>
-                <X className="h-4 w-4" />
+                <X className="h-4 w-4 bg-transparent dark:bg-blue-500" />
               </Button>
             )}
           </div>
