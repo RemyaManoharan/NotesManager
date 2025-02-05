@@ -4,9 +4,17 @@
 
 :root {
   --note-primary: #0c90eb;
+  --background: #fafafa;
+  --text: #213547;
+}
+:root[class~='dark'] {
+  --background: #121212;
+  --text: #ffffff;
+  --note-primary: #2563eb;
 }
 body {
-  background-color: #FAFAFA;
+  background-color: var(--background);
+  color: var(--text);
   font-family: 'Montserrat', sans-serif;
 }
 

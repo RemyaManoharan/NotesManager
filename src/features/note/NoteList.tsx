@@ -14,7 +14,13 @@ const NoteList: React.FC = () => {
   const handleEditClick = (note: Note) => {
     navigate(`/note/${note.id}`);
   };
-
+  if (!filteredNotes || filteredNotes.length === 0) {
+    return (
+      <div className="flex h-64 items-center justify-center">
+        <p className="text-lg text-gray-500">No notes to show</p>
+      </div>
+    );
+  }
   return (
     <div className="grid auto-rows-fr grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
       {filteredNotes.map((note) => (
@@ -26,7 +32,6 @@ const NoteList: React.FC = () => {
         />
       ))}
     </div>
- 
   );
 };
 
