@@ -30,7 +30,7 @@ const Header = () => {
               >
                 Home
               </Link>
-              <ThemeToggle />
+            
               <Button size="sm" onClick={() => navigate('/search')}>
                 <span>Search</span>
               </Button>
@@ -41,6 +41,7 @@ const Header = () => {
               <AiOutlinePlus className="h-4 w-4" />
               <span>New note</span>
             </Button>
+            <ThemeToggle />
           </div>
         </div>
       </div>
