@@ -53,26 +53,46 @@ const SideBar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <div className="h-full w-64 border-r border-gray-200 bg-white px-4">
+    <div className="h-full w-64 bg-transparent px-4">
       <Tabs
         defaultValue={defaultSelected}
         orientation="vertical"
         className="w-full"
         onValueChange={handleCategoryClick}
       >
-        <TabsList className="flex h-full w-full flex-col space-y-4 bg-white p-2">
+        <TabsList className="mt-5 flex h-full w-full flex-col space-y-4 p-2">
           {SIDEBAR_ITEMS.map((item) => (
             <TabsTrigger
               key={item.id}
               value={item.category}
-              className="flex w-full items-center justify-start gap-2 px-4 py-2"
+              className={`flex w-full items-center justify-start gap-2 px-4 py-2 transition-colors ${
+                selectedCategory === item.category
+                  ? 'bg-white/10'
+                  : 'bg-white/5 hover:bg-white/10'
+              }`}
             >
               <span
-                className={`${selectedCategory === item.category ? 'text-blue-600' : 'text-gray-400'}`}
+                style={{
+                  color:
+                    selectedCategory === item.category
+                      ? 'var(--note-primary)'
+                      : 'var(--text)',
+                  opacity: selectedCategory === item.category ? 1 : 0.8,
+                }}
               >
                 {item.icon}
               </span>
-              <span>{item.category}</span>
+              <span
+                style={{
+                  color:
+                    selectedCategory === item.category
+                      ? 'var(--note-primary)'
+                      : 'var(--text)',
+                  opacity: selectedCategory === item.category ? 1 : 0.8,
+                }}
+              >
+                {item.category}
+              </span>
             </TabsTrigger>
           ))}
         </TabsList>

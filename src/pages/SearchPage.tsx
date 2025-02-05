@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNotesStore } from '@/store/useNoteStore';
 import { useNavigate } from 'react-router-dom';
@@ -51,18 +50,17 @@ const SearchPage = () => {
   }, [searchTitle, selectedDate, notes]);
 
   return (
-    <div className="container mx-auto mt-8 bg-red-50 p-4">
+    <div className="bg-grey-50 container mx-auto mt-8 p-4">
       <div className="space-y-4">
         {/* Search Filters */}
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col gap-4 md:flex-row">
           {/* Search by Title */}
-          <div className="flex gap-2 flex-1">
+          <div className="flex flex-1 gap-2">
             <Input
               placeholder="Search by Title"
               value={searchTitle}
               onChange={(e) => setsearchTitle(e.target.value)}
               className="w-full"
-          
             />
             {searchTitle && (
               <Button
@@ -80,10 +78,7 @@ const SearchPage = () => {
           <div className="flex gap-2">
             <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
               <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  className="h-10 px-4"
-                >
+                <Button variant="outline" className="h-10 px-4">
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {selectedDate ? (
                     format(selectedDate, 'M/d/yyyy')
