@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Notepad base -->
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+  <!-- Lines on notepad -->
+  <line x1="8" y1="8" x2="16" y2="8" />
+  <line x1="8" y1="12" x2="16" y2="12" />
+  <line x1="8" y1="16" x2="16" y2="16" />
+  <!-- Pen -->
+  <path d="M16 6l2-2 2 2-2 2z" />
+  <line x1="18" y1="4" x2="18" y2="2" />
+</svg>
