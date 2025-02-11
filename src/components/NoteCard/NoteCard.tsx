@@ -12,6 +12,8 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { useState } from 'react';
+import { RichTextDisplay } from '../LexicalEditor/LexicalEditor';
+
 interface NoteCardProps {
   note: Note;
   onDelete: (id: string) => void;
@@ -47,12 +49,8 @@ const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete, onClick }) => {
       <div
         className={`flex-grow overflow-hidden p-4 ${isExpanded ? 'overflow-y-auto' : ''}`}
       >
-        <p
-          className={`text-sm text-foreground/80 dark:text-foreground/70 ${isExpanded ? '' : 'line-clamp-4'}`}
-        >
-          {content}
-        </p>
-        {content.length > 150 && (
+               <RichTextDisplay content={content} isExpanded={isExpanded} />
+        {content.length > 100 && (
           <button
             onClick={toggleExpand}
             className="mt-2 bg-transparent text-sm font-medium hover:opacity-80"
