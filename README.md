@@ -110,5 +110,5 @@ The project includes the following npm scripts:
 ### Search Notes
 ![Search Notes](screenshots/Search.png)
 
-### Monile Scrren
+### Mobile Screen
 ![Search Notes](screenshots/MobileHome.png)
