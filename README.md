@@ -46,14 +46,14 @@ NoteHub is a user-friendly note-taking application that allows you to create, ma
 ### Getting Started
 
 1. Clone the repository
-```bash
+
 git clone https://github.com/yourusername/notesManager.git
 cd notesManager
 
-1. Install dependencies:
+2. Install dependencies:
 ```npm install```
 
-2. Start the development server:
+3. Start the development server:
 ```npm run dev```
 
 The app will be available at `http://localhost:5173`
