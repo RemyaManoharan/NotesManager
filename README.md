@@ -33,6 +33,7 @@ NoteHub is a user-friendly note-taking application that allows you to create, ma
 
 ### Development Tools
 - Vite - Build tool and development server
+- Vitest - Build tool and development server
 - ESLint - Code linting
 - Prettier - Code formatting
 
@@ -62,13 +63,20 @@ The app will be available at `http://localhost:5173`
 The project includes the following npm scripts:
 
 - **`npm run dev`** - Starts the development server using Vite.
+- **`npm test`** - Start testing.
 - **`npm run build`** - Compiles TypeScript and builds the project for production.
 - **`npm run lint`** - Runs ESLint to check for code issues.
 - **`npm run format`** - Formats the code using Prettier.
 - **`npm run format:check`** - Checks if the code follows the Prettier formatting rules.
 - **`npm run preview`** - Serves the production build locally for testing.
 
-```
+## Testing
+- Tool: Vitest with React Testing Library
+- Setup : ```npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom```
+- Configure: Add test settings in vite.configure.ts
+- Test Files: Create .test.tsx files alongside components
+- Run Tests: All Tests : ```npm test```
+
 ## Project Structure 📁
 
 - notesManager/
