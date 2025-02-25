@@ -1,7 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-
 import { AiOutlinePlus } from 'react-icons/ai';
-// import notelogo from '../../assets/notelogo.png';
 import { Button } from '../ui/button';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import { useState } from 'react';
